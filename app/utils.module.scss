@@ -1,0 +1,20 @@
+$primary: #64ff00;
+$secondary: #343456;
+$black: #000000;
+$white: #ffffff;
+$grey: #606060;
+$screen-md-min: 768px;
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  black: $black;
+  white: $white;
+  grey: $grey;
+}
