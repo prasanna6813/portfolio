@@ -1,4 +1,3 @@
-
 export const projectsData: any = {
   title: "Kerzner International",
   role: "Roles and Responsibilities :- Created responsive websites for Kerzner projects in collaboration with Like Digital client. Utilized the Next.js framework to develop full-stack web applications, implementing new features and enhancements. Played a pivotal role in diagnosing and fixing bugs to enhance user experience. Collaborated with cross-functional teams on developing web applications for restaurant and hotel chain management.",
@@ -59,11 +58,6 @@ export const projectsData: any = {
       title: "Mazagan Beach Resort",
       herf: "https://www.mazaganbeachresort.com",
       image: "/projects/maz.webp",
-    },
-    {
-      title: "42 Cards",
-      href: "https://www.42cards.com",
-      image: "/projects/42Card.jpeg",
     },
     {
       title: "Aquaventure World",
