@@ -1,0 +1,10 @@
+@import "../utils.module.scss";
+
+.iframeContainer {
+  .iframe {
+    height: 88vh;
+    @include md {
+      height: 1200px;
+    }
+  }
+}
