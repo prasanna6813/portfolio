@@ -28,9 +28,9 @@ const GetInTouch = () => {
     <div className={styles.getInTouchContainer}>
       <h2 className={styles.title}>Get In Touch</h2>
       <p className={styles.text}>
-        I'm actively looking for any new opportunities, my inbox is always open.
-        Whether you have a question or want to hire me or just want to say
-        hello, I'll try my best to get back to you!
+        {
+          "I'm actively looking for any new opportunities, my inbox is always open. Whether you have a question or want to hire me or just want to say hello, I'll try my best to get back to you!"
+        }
       </p>
 
       <form className={styles.form}>
@@ -69,17 +69,14 @@ const GetInTouch = () => {
         </div>
 
         <button
-          type="submit"
-          className={classNames(
-            "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-3 rounded",
-          )}>
+          type="button"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-3 rounded">
           Send
         </button>
       </form>
 
       <hr />
 
-      {/* Contact Information */}
       <div className={styles.contactInfoContainer}>
         <div className={styles.contactInfo}>
           <span>{"contact me "}</span>
@@ -103,10 +100,14 @@ const GetInTouch = () => {
             href="https://www.facebook.com/prasannakumar.kamjula.5/"
             className={styles.contactInfo}
             title="prasanna6813@gmail.com">
-            <Image src="/social/facebook.svg" height="26" width="32" alt="email" />
+            <Image
+              src="/social/facebook.svg"
+              height="26"
+              width="32"
+              alt="email"
+            />
           </a>
         </div>
-        {/* Add other contact information similarly */}
       </div>
     </div>
   );
