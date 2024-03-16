@@ -8,4 +8,13 @@ export const oneColumnProjectlist: any[] = [
     image_position: "left",
     href: "https://www.42cards.com",
   },
+  {
+    title: "Vibrant Living",
+    description:
+      "About Vibrant Living :- Established in 2010, Vibrant Living promotes holistic living through plant-based foods crafted with cultural roots in mind. Founded by Sridevi, a holistic nutritionist and gourmet chef, our journey began with nutrition workshops and consultations, expanding to serve a global clientele with tasty snacks and staples. We deeply engage with farmers, promoting natural farming practices, while our expert core team passionately drives our mission.",
+    role: "Roles and Responsibilities :- Developed a responsive website for Vibrant Living using the React.js front-end library, implementing new features and enhancements. Developed food delivery flow so that users can log in and order their chosen items. Identified and resolved bugs to improve the user experience.",
+    image: "/projects/vibrantliving.jpeg",
+    image_position: "right",
+    href: "https://www.vibrantliving.in/",
+  },
 ];

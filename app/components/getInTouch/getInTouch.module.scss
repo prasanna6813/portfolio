@@ -1,0 +1,84 @@
+@import "../../utils.module.scss";
+.getInTouchContainer {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  @include md {
+    margin: 60px auto;
+  }
+
+  .title {
+    font-size: 36px;
+    // text-align: center;
+    padding-bottom: 16px;
+    text-align: center;
+  }
+  .text {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+  }
+  .form {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 700px;
+    margin: 0px auto;
+    @include md {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      gap: 16px;
+
+      @include md {
+        flex-direction: row;
+      }
+    }
+    .inputWrapper {
+      width: 100%;
+      input {
+        width: 100%;
+        height: 36px;
+        padding-left: 12px;
+        margin-top: 6px;
+        color: $black;
+      }
+      textarea {
+        width: 100%;
+        height: 84px;
+        padding-left: 12px;
+        margin-top: 6px;
+        padding-top: 4px;
+        color: $black;
+      }
+    }
+  }
+  .contactInfoContainer {
+    margin: 18px auto;
+
+    .contactInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      @include md{
+        gap: 24px;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ $secondary: #343456;
 $black: #000000;
 $white: #ffffff;
 $grey: #606060;
+$light-grey: #d3d3d3;
 $screen-md-min: 768px;
 $max-component-width: 1420px;
 
@@ -18,5 +19,6 @@ $max-component-width: 1420px;
   black: $black;
   white: $white;
   grey: $grey;
+  lightGrey: $light-grey;
   maxComponentWidth: $max-component-width;
 }

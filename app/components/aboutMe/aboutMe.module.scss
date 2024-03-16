@@ -1,0 +1,57 @@
+@import "../../utils.module.scss";
+
+.aboutMeWrapper {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 20px;
+  flex-direction: column;
+  @include md {
+    flex-direction: row;
+    padding: 60px 0px;
+    gap: 64px;
+  }
+
+  .title {
+    font-size: 36px;
+    padding-bottom: 16px;
+    text-align: center;
+  }
+  .about {
+    font-size: 16px;
+    @include md {
+      font-size: 24px;
+    }
+  }
+  @keyframes tada {
+    0% {
+      transform: scale(1);
+    }
+    10%,
+    20% {
+      transform: scale(0.9) rotate(-3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    40%,
+    60%,
+    80% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+      transform: scale(1) rotate(0);
+    }
+  }
+
+  .animateTada {
+    &:hover {
+      animation: tada 3s infinite;
+    }
+  }
+}
