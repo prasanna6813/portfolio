@@ -1,32 +1,26 @@
-import React from "react";
+"use client";
+import React, { memo } from "react";
 import styles from "./aboutMe.module.scss";
 import Image from "next/image";
 import classNames from "classnames";
+import { aboutMeData } from "./dummyData";
 
 function AboutMe() {
   return (
     <section className={styles.aboutMeWrapper}>
       <div>
-        <h2 className={styles.title}>AboutMe</h2>
-        <article className={styles.about}>
-          Hello! My name is K.L. Prasanna Kumar, and I am a Software Engineer
-          currently employed at OSI Digital, where I am actively acquiring new
-          skills. As a self-taught developer, I enjoy creating innovative
-          projects aimed at simplifying tasks for users. I am seeking a web
-          developer position where I can further cultivate my skills and
-          continue to grow professionally.
-        </article>
+        <h2 className={styles.title}>{aboutMeData.title}</h2>
+        <article className={styles.about}>{aboutMeData.discription}</article>
       </div>
       <Image
-        src="/social/myPic.jpg"
+        src={aboutMeData.image}
         height="600"
         width="400"
         alt="myPic"
-        style={{ transform: "translate3d(0, 0, 0)" }}
-        className={classNames(styles.animateTada,"rounded-lg mr-3")}
+        className= "rounded-lg transform transition duration-300 hover:scale-110"
       />
     </section>
   );
 }
 
-export default AboutMe;
+export default memo(AboutMe);

@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { memo } from "react";
 import { techStackData } from "./dummyData";
 import styles from "./techStack.module.scss";
 import Image from "next/image";
@@ -14,8 +15,8 @@ function TechStack() {
             <Image
               src={tech.icon}
               alt={tech.name}
-              height="82"
-              width="82"
+              height="72"
+              width="72"
               className={classNames(
                 styles.techIcon,
                 "transform transition duration-300 hover:scale-125",
@@ -31,4 +32,4 @@ function TechStack() {
   );
 }
 
-export default TechStack;
+export default memo(TechStack);

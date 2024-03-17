@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import Link from "next/link";
 import { AboutIcon, RocketIcon, ResumeIcon } from "@/app/icons";
 import styles from "./header.module.scss";
@@ -43,4 +43,4 @@ const Header: FC = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

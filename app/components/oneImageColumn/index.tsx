@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { memo } from "react";
 import styles from "./oneImageColumn.module.scss";
 import classNames from "classnames";
 import Image from "next/image";
@@ -39,4 +40,4 @@ const OneImageColumn = ({
   );
 };
 
-export default OneImageColumn;
+export default memo(OneImageColumn);

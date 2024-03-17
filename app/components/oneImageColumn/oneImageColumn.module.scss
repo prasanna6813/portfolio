@@ -38,8 +38,8 @@
       margin: auto;
       padding: 0px 20px;
       @include md {
-        max-width: 800px;
-        height: 600px;
+        max-width: 500px;
+        height: 500px;
       }
     }
   }
@@ -70,7 +70,7 @@
     .description {
       position: relative;
       padding-bottom: 14px;
-      text-align: justify;
+      text-align: center;
 
       @include md {
         padding-bottom: 18px;

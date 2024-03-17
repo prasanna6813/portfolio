@@ -15,20 +15,18 @@
   .techStack {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
+    justify-content: space-around;
     gap: 32px;
     flex-wrap: wrap;
-    // background: $light-grey;
     padding: 32px;
     @include md {
       gap: 86px;
       padding: 56px;
+      justify-content: start;
     }
     .techIcon {
-      height: 56px;
-      @include md {
-        height: 86px;
-      }
+      width: auto;
+      height: 72px;
     }
   }
 }
