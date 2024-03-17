@@ -1,8 +1,10 @@
 "use client";
-import { useState, useCallback, ChangeEvent, memo } from "react";
+import { useState, useCallback, ChangeEvent, memo, FormEvent } from "react";
 import styles from "./getInTouch.module.scss";
 import classNames from "classnames";
 import Image from "next/image";
+import isValidEmail from "@/app/utils/isEmailValid";
+import { getInTouchData } from "./dummyData";
 
 export interface formDataType {
   email: string;
@@ -27,43 +29,46 @@ const GetInTouch = () => {
     [],
   );
 
-  const handleSubmit = useCallback(async () => {
-    try {
-      setStatus("");
-      setDisable(true);
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+  const handleSubmit = useCallback(
+    async (event: FormEvent<HTMLFormElement>) => {
+      try {
+        event.preventDefault();
+        if (!formData?.email || !isValidEmail(formData?.email))
+          return setStatus("Enter valid email!");
+        setStatus("");
+        setDisable(true);
+        const response = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
 
-      if (response.ok) {
-        const data = await response.json();
-        setStatus(data);
+        if (response.ok) {
+          const data = await response.json();
+          setStatus(data);
+          setDisable(false);
+        } else {
+          const errorMessage =
+            (await response.json()) || (await response.text());
+          setStatus(errorMessage);
+        }
+      } catch (error) {
         setDisable(false);
-      } else {
-        const errorMessage = (await response.json()) || (await response.text());
-        setStatus(errorMessage);
+        console.error(error);
+        setStatus("Error sending email");
       }
-    } catch (error) {
-      setDisable(false);
-      console.error(error);
-      setStatus("Error sending email");
-    }
-  }, [formData]);
+    },
+    [formData],
+  );
 
   return (
     <div className={styles.getInTouchContainer}>
-      <h2 className={styles.title}>Get In Touch</h2>
-      <p className={styles.text}>
-        {
-          "I'm actively looking for any new opportunities, my inbox is always open. Whether you have a question or want to hire me or just want to say hello, I'll try my best to get back to you!"
-        }
-      </p>
+      <h2 className={styles.title}>{getInTouchData.title}</h2>
+      <p className={styles.text}>{getInTouchData.description}</p>
 
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.info}>
           <div className={styles.inputWrapper}>
             <label>Name</label>
@@ -84,6 +89,7 @@ const GetInTouch = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              required
               placeholder="email@example.com"
               className={classNames("rounded")}
               disabled={isDisable}
@@ -102,9 +108,8 @@ const GetInTouch = () => {
         </div>
 
         <button
-          type="button"
+          type="submit"
           disabled={isDisable}
-          onClick={handleSubmit}
           className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-3 rounded ${
             isDisable ? "opacity-50 cursor-not-allowed" : ""
           }`}>

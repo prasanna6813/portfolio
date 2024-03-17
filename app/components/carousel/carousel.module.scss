@@ -91,15 +91,17 @@
 
   :global(.slick-prev) {
     left: 6px;
+    top: 40%;
     @include md {
-      top: 30%;
+      top: 35%;
     }
   }
 
   :global(.slick-next) {
     right: 6px;
+    top: 40%;
     @include md {
-      top: 30%;
+      top: 35%;
     }
   }
 }

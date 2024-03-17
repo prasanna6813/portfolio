@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import { NextRequest } from "next/server";
+import isValidEmail from "@/app/utils/isEmailValid";
 
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json();
@@ -35,9 +36,4 @@ export async function POST(req: NextRequest) {
     Response.error();
     return Response.json("Error sending email");
   }
-}
-
-function isValidEmail(email: string) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
 }

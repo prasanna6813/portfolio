@@ -8,9 +8,12 @@
     margin-top: 60px;
   }
   .title {
-    font-size: 36px;
+    font-size: 24px;
     text-align: center;
     padding-bottom: 16px;
+    @include md {
+      font-size: 36px;
+    }
   }
   .techStack {
     display: flex;
@@ -26,7 +29,10 @@
     }
     .techIcon {
       width: auto;
-      height: 72px;
+      height: 58px;
+      @include md {
+        height: 72px;
+      }
     }
   }
 }

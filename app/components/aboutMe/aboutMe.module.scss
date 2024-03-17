@@ -1,7 +1,7 @@
 @import "../../utils.module.scss";
 
 .aboutMeWrapper {
-  max-width: 1400px;
+  max-width: $max-component-width;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -10,18 +10,25 @@
   flex-direction: column;
   @include md {
     flex-direction: row;
-    padding: 60px 0px;
+    padding: 60px 24px;
     gap: 64px;
   }
 
   .title {
-    font-size: 36px;
+    font-size: 24px;
     padding-bottom: 16px;
+    text-align: center;
+    @include md {
+      font-size: 36px;
+      text-align: left;
+    }
   }
   .about {
     font-size: 16px;
+    text-align: center;
     @include md {
       font-size: 24px;
+      text-align: left;
     }
   }
 }
