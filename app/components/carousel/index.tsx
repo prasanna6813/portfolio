@@ -44,7 +44,7 @@ const Carousel = () => {
       <p className={styles.roleDiscription}>{projectsData?.role}</p>
       <Slider {...settingsv2} className={styles.slider}>
         {projectsData?.projectList?.map((slideData: any, index: number) => (
-          <CarouselSlide slideData={slideData} key={`CarouselSlide_${index}`} />
+          <CarouselSlide {...slideData} key={`CarouselSlide_${index}`} />
         ))}
       </Slider>
     </div>

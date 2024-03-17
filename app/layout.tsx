@@ -7,9 +7,9 @@ import GetInTouch from "./components/getInTouch";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Portfolio | about",
   description:
-    "exporing new devolopment opportunities, javaScript, react js, next js",
+    "Exporing Software devolopment opportunities in trending technologies",
 };
 
 export default function RootLayout({

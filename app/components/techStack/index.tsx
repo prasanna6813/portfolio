@@ -1,13 +1,14 @@
-"use client"
-import React, { memo } from "react";
+import React, { FC, memo } from "react";
 import { techStackData } from "./dummyData";
 import styles from "./techStack.module.scss";
 import Image from "next/image";
 import classNames from "classnames";
 
-function TechStack() {
+const TechStack: FC = () => {
   return (
-    <section className={styles.techStackWrapper}>
+    <section
+      className={styles.techStackWrapper}
+      data-category="Technical Skills">
       <h2 className={styles.title}>Technical Skills</h2>
       <div className={styles.techStack}>
         {techStackData.map((tech, index) => {
@@ -17,19 +18,19 @@ function TechStack() {
               alt={tech.name}
               height="72"
               width="72"
+              layout="fixed"
               className={classNames(
                 styles.techIcon,
                 "transform transition duration-300 hover:scale-125",
               )}
               key={`tech_${index}`}
               title={tech.name}
-              unoptimized={true}
             />
           );
         })}
       </div>
     </section>
   );
-}
+};
 
 export default memo(TechStack);

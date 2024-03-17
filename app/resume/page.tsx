@@ -1,7 +1,13 @@
-"use client"
-import React, { memo } from "react";
+import React, { memo, FC } from "react";
 import styles from "./resume.module.scss";
-function Resume() {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Resume",
+  description: "View my resume in this page",
+};
+
+const Resume: FC = () => {
   return (
     <section className={styles.iframeContainer}>
       <iframe
@@ -12,6 +18,6 @@ function Resume() {
       />
     </section>
   );
-}
+};
 
 export default memo(Resume);
