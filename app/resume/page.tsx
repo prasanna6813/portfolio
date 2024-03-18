@@ -8,10 +8,11 @@ export const metadata: Metadata = {
 };
 
 const Resume: FC = () => {
+  const resumeLink: string = process.env.RESUME ?? "";
   return (
     <section className={styles.iframeContainer}>
       <iframe
-        src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://drive.google.com/uc?id=1cYsNxOJi9ncuFcc0l7Y29FcnSF7irSLQ"
+        src={resumeLink}
         width="100%"
         frameBorder="0"
         className={styles.iframe}
