@@ -16,13 +16,9 @@ const Resume: FC = () => {
         width="100%"
         className={styles.pdf}
         title="resume">
-        <p>
-          Here's a link to{" "}
-          <a href="https://drive.google.com/file/d/1cYsNxOJi9ncuFcc0l7Y29FcnSF7irSLQ/view?usp=drive_link">
-            the PDF
-          </a>
-          instead.
-        </p>
+        <a href="https://drive.google.com/file/d/1cYsNxOJi9ncuFcc0l7Y29FcnSF7irSLQ/view?usp=drive_link">
+          view resume
+        </a>
       </object>
     </section>
   );
