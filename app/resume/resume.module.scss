@@ -1,8 +1,8 @@
 @import "../utils.module.scss";
 
-.iframeContainer {
-  .iframe {
-    height: 88vh;
+.pdfContainer {
+  .pdf {
+    height: 100vh;
     @include md {
       height: 1200px;
     }

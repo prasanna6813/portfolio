@@ -8,15 +8,22 @@ export const metadata: Metadata = {
 };
 
 const Resume: FC = () => {
-  const resumeLink: string = process.env.RESUME ?? "";
   return (
-    <section className={styles.iframeContainer}>
-      <iframe
-        src={resumeLink}
+    <section className={styles.pdfContainer}>
+      <object
+        data="/LakshmiResume.pdf"
+        type="application/pdf"
         width="100%"
-        frameBorder="0"
-        className={styles.iframe}
-      />
+        className={styles.pdf}
+        title="resume">
+        <p>
+          Here's a link to{" "}
+          <a href="https://drive.google.com/file/d/1cYsNxOJi9ncuFcc0l7Y29FcnSF7irSLQ/view?usp=drive_link">
+            the PDF
+          </a>
+          instead.
+        </p>
+      </object>
     </section>
   );
 };

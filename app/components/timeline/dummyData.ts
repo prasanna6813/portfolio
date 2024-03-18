@@ -17,7 +17,7 @@ export const timelineData: any[] = [
     title: "Mobigesture Software Pvt. Ltd",
     subtitle: "Associate Software Engineer",
     details:
-      "Developed my front-end web development skills by working with React.js, JavaScript, HTML, CSS, and SASS on multiple projects.",
+      "I have gained experience in front-end development by working with React.js, JavaScript, HTML, CSS, and SASS on multiple projects.",
   },
   {
     classes: "vertical-timeline-element--education",
@@ -36,6 +36,6 @@ export const timelineData: any[] = [
     isWork: false,
     title: "SRKR Engineering College",
     subtitle: "B.Tech",
-    details: "Did my Bachelor's in Mechanical Engineering.",
+    details: "Complited my Bachelor's in Mechanical Engineering.",
   },
 ];
