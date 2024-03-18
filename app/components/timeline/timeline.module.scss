@@ -18,13 +18,10 @@
   .subtitle {
     font-size: 12px;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     @include md {
       font-size: 16px;
-      margin-bottom: 32px;
+      margin-bottom: 42px;
     }
   }
-  // .dataContent {
-  //   background: $grey;
-  // }
 }
