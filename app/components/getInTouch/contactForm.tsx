@@ -3,6 +3,7 @@ import { useState, useCallback, ChangeEvent, memo, FormEvent, FC } from "react";
 import styles from "./getInTouch.module.scss";
 import classNames from "classnames";
 import isValidEmail from "@/app/utils/isEmailValid";
+import { SpinnerIcon } from "@/app/icons";
 
 export interface formDataType {
   email: string;
@@ -48,6 +49,7 @@ const ContactForm: FC = () => {
           const data = await response.json();
           setStatus(data);
           setDisable(false);
+          setFormData({ name: "", email: "", message: "" });
         } else {
           const errorMessage =
             (await response.json()) || (await response.text());
@@ -56,7 +58,7 @@ const ContactForm: FC = () => {
       } catch (error) {
         setDisable(false);
         console.error(error);
-        setStatus("Error sending email");
+        setStatus("Error sending email, please after some time!");
       }
     },
     [formData],
@@ -107,14 +109,18 @@ const ContactForm: FC = () => {
       <button
         type="submit"
         disabled={isDisable}
-        className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-3 rounded ${
-          isDisable ? "opacity-50 cursor-not-allowed" : ""
-        }`}>
-        Send
+        className={classNames(styles.btn, isDisable && styles.btnDisabled)}>
+        {isDisable ? (
+          <>
+            <SpinnerIcon /> Sending
+          </>
+        ) : (
+          "Send"
+        )}
       </button>
       {status}
     </form>
   );
 };
 
-export default ContactForm;
+export default memo(ContactForm);

@@ -2,11 +2,11 @@
 
 .sliderContainer {
   position: relative;
-  padding: 30px 0px;
+  padding: 85px 0px;
   background: $black;
   color: $white;
   @include md {
-    padding: 60px 40px;
+    padding: 100px 40px;
     max-width: 1400px;
     margin: auto;
   }

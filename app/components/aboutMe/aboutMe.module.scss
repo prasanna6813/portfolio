@@ -2,15 +2,19 @@
 
 .aboutMeWrapper {
   max-width: $max-component-width;
+  height: 100vh;
   margin: auto;
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  gap: 32px;
-  padding: 30px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0px 20px;
   flex-direction: column;
   @include lg {
     flex-direction: row;
-    padding: 60px 24px;
+    justify-content: space-between;
+    padding: 0px 24px;
     gap: 82px;
   }
 
@@ -31,10 +35,53 @@
       text-align: left;
     }
   }
+
   .image {
-    @include md {
-      width: auto;
-      height: 450px;
+    --s: 16px; /* size of the frame */
+    --b: 6px; /* border thickness */
+    --w: 550px; /* width of the image */
+    --c: #ffffff;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: var(--s);
+    --_g: #0000 25%, var(--c) 0;
+    background: conic-gradient(
+          from 90deg at top var(--b) left var(--b),
+          var(--_g)
+        )
+        var(--_p, -5%) var(--_p, -5%),
+      conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g))
+        calc(100% - var(--_p, -5%)) var(--_p, -5%),
+      conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g))
+        var(--_p, -5%) calc(100% - var(--_p, -5%)),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g))
+        calc(100% - var(--_p, -5%)) calc(100% - var(--_p, -5%));
+    background-size: 20% 20%;
+    background-repeat: no-repeat;
+    outline: calc(var(--w) / 2) solid #0005;
+    outline-offset: calc(var(--w) / -2 - var(--s));
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+      outline-offset: 2px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      --_p: calc(var(--s) / 4);
+      transition: 0.3s, background-position 0.3s 0.35s;
     }
+  }
+
+  .scrollDownWrapper {
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 24px;
+    cursor: pointer;
   }
 }

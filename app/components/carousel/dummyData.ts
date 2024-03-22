@@ -46,12 +46,12 @@ export const projectsData: any = {
     },
     {
       title: "Atlantis the Royal Residences",
-      herf: "https://www.atlantis.com/atlantis-the-royal",
+      href: "https://www.atlantis.com/atlantis-the-royal",
       image: "/projects/atr.jpg",
     },
     {
       title: "Atlantis the Palm Residences",
-      herf: "https://www.atlantis.com/atlantis-the-palm",
+      href: "https://www.atlantis.com/atlantis-the-palm",
       image: "/projects/atp.jpg",
     },
     {

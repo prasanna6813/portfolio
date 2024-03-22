@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider, { Settings } from "react-slick";
 import { projectsData } from "./dummyData";
 import styles from "./carousel.module.scss";
+import classNames from "classnames";
 
 const Carousel = () => {
   const settingsv2: Settings = {
@@ -15,12 +16,15 @@ const Carousel = () => {
     className: styles.slickCustomSlide,
     dotsClass: styles.slickCustomDots,
     slidesToShow: 4,
-    // autoplay: true,
+    autoplay: true,
+    cssEase: "ease-in",
+    
     responsive: [
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
+          fade: true,
         },
       },
       {
@@ -38,8 +42,8 @@ const Carousel = () => {
     ],
   };
   return (
-    <div className={styles.sliderContainer}>
-      <h2 className={styles.title}>{projectsData?.title}</h2>
+    <div className={classNames(styles.sliderContainer)}>
+      <h2 className={classNames(styles.title)}>{projectsData?.title}</h2>
       <p className={styles.discription}>{projectsData?.about}</p>
       <p className={styles.roleDiscription}>{projectsData?.role}</p>
       <Slider {...settingsv2} className={styles.slider}>

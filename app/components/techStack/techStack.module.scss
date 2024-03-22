@@ -3,7 +3,7 @@
 .techStackWrapper {
   max-width: 1400px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 45px;
   @include md {
     margin-top: 60px;
   }
@@ -18,14 +18,13 @@
   .techStack {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     gap: 32px;
     flex-wrap: wrap;
     padding: 32px;
     @include md {
       gap: 86px;
       padding: 56px;
-      justify-content: start;
     }
     .techIcon {
       width: 55px;

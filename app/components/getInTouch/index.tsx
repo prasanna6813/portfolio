@@ -1,13 +1,11 @@
-"use client";
-import { useState, useCallback, ChangeEvent, memo, FormEvent } from "react";
+import React, { memo, FC } from "react";
 import styles from "./getInTouch.module.scss";
 import classNames from "classnames";
 import Image from "next/image";
-import isValidEmail from "@/app/utils/isEmailValid";
-import { getInTouchData } from "./dummyData";
+import { getInTouchData, socialLister } from "./dummyData";
 import ContactForm from "./contactForm";
 
-const GetInTouch = () => {
+const GetInTouch: FC = () => {
   return (
     <div className={styles.getInTouchContainer}>
       <h2 className={styles.title}>{getInTouchData.title}</h2>
@@ -17,33 +15,24 @@ const GetInTouch = () => {
       <div className={styles.contactInfoContainer}>
         <div className={styles.contactInfo}>
           <span>{"contact me "}</span>
-          <a
-            href="https://www.linkedin.com/in/prasanna-kumar-03a446105/"
-            className={styles.contactInfo}>
-            <Image
-              src="/social/linkedin.svg"
-              height="26"
-              width="32"
-              alt="email"
-            />
-          </a>
-          <a
-            href="mailto:prasanna6813@gmail.com"
-            className={styles.contactInfo}
-            title="prasanna6813@gmail.com">
-            <Image src="/social/mail.svg" height="26" width="32" alt="email" />
-          </a>
-          <a
-            href="https://www.facebook.com/prasannakumar.kamjula.5/"
-            className={styles.contactInfo}
-            title="prasanna6813@gmail.com">
-            <Image
-              src="/social/facebook.svg"
-              height="26"
-              width="32"
-              alt="email"
-            />
-          </a>
+          {socialLister.map((item, index) => (
+            <a
+              href={item.href}
+              title={item.title}
+              target="_blank"
+              className={classNames(
+                styles.contactInfo,
+                "transform transition duration-300 hover:scale-125",
+              )}
+              key={`social_${index}`}>
+              <Image
+                src={item.image}
+                height="26"
+                width="32"
+                alt={`${item.title}_image`}
+              />
+            </a>
+          ))}
         </div>
       </div>
     </div>

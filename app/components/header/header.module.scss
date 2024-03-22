@@ -1,6 +1,19 @@
 @import "../../utils.module.scss";
 .appHeader {
   border-bottom: 1px solid $grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  background-color: $black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+  color: $white;
 }
 
 .headerContainer {
@@ -16,7 +29,7 @@
   .shortName {
     font-size: 32px;
     padding-bottom: 6px;
-    @include md{
+    @include md {
       font-size: 42px;
       padding-bottom: 4px;
     }

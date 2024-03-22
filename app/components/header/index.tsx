@@ -5,7 +5,7 @@ import { AboutIcon, RocketIcon, ResumeIcon } from "@/app/icons";
 import styles from "./header.module.scss";
 import { usePathname } from "next/navigation";
 import variables from "@/app/utils.module.scss";
-
+import classNames from "classnames";
 
 const Header: FC = () => {
   const currentRoute = usePathname();
@@ -14,7 +14,7 @@ const Header: FC = () => {
     <nav className={styles.appHeader}>
       <div className={styles.headerContainer}>
         <Link href="/">
-          <h4 className={styles.shortName}>KLPK</h4>
+          <h4 className={classNames(styles.shortName)}>KLPK</h4>
         </Link>
         <div className={styles.pageList}>
           {[
@@ -32,7 +32,9 @@ const Header: FC = () => {
               {React.cloneElement(item.icon as React.ReactElement<any>, {
                 isActive: currentRoute === item.href,
                 fill:
-                  currentRoute === item.href ? variables?.white : variables?.grey,
+                  currentRoute === item.href
+                    ? variables?.white
+                    : variables?.grey,
               })}
               <small>{item.label}</small>
             </Link>

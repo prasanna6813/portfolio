@@ -1,6 +1,7 @@
 @import "../utils.module.scss";
 
 .pdfContainer {
+  padding-top: 80px;
   .pdf {
     height: 100vh;
     @include md {

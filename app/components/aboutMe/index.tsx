@@ -2,6 +2,7 @@ import React, { memo, FC } from "react";
 import styles from "./aboutMe.module.scss";
 import Image from "next/image";
 import { aboutMeData } from "./dummyData";
+import ScrollDownButton from "./scrollDownButton";
 
 const AboutMe: FC = () => {
   return (
@@ -16,8 +17,9 @@ const AboutMe: FC = () => {
         width="400"
         title="K.L. Prasanna Kumar"
         alt={aboutMeData.altText || "My Picture"}
-        className="rounded-lg transform transition duration-300 hover:scale-110 m-auto"
+        className={styles.image}
       />
+      <ScrollDownButton className={styles.scrollDownWrapper} />
     </section>
   );
 };

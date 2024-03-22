@@ -36,6 +36,6 @@ export const timelineData: any[] = [
     isWork: false,
     title: "SRKR Engineering College",
     subtitle: "B.Tech",
-    details: "Complited my Bachelor's in Mechanical Engineering.",
+    details: "Completed my Bachelor's in Mechanical Engineering.",
   },
 ];
