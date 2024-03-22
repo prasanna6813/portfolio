@@ -22,7 +22,7 @@
     font-size: 24px;
     padding-bottom: 16px;
     text-align: center;
-    @include md {
+    @include lg {
       font-size: 38px;
       text-align: left;
     }
@@ -30,7 +30,7 @@
   .about {
     font-size: 16px;
     text-align: center;
-    @include md {
+    @include lg {
       font-size: 28px;
       text-align: left;
     }
