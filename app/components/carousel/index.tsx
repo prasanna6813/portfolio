@@ -18,7 +18,7 @@ const Carousel = () => {
     slidesToShow: 4,
     autoplay: true,
     cssEase: "ease-in",
-    
+
     responsive: [
       {
         breakpoint: 600,
@@ -42,10 +42,12 @@ const Carousel = () => {
     ],
   };
   return (
-    <div className={classNames(styles.sliderContainer)}>
+    <div className={classNames(styles.sliderContainer, "animate-fade-in")}>
+      {/* <div className="animate-fade-in"> */}
       <h2 className={classNames(styles.title)}>{projectsData?.title}</h2>
       <p className={styles.discription}>{projectsData?.about}</p>
       <p className={styles.roleDiscription}>{projectsData?.role}</p>
+      {/* </div> */}
       <Slider {...settingsv2} className={styles.slider}>
         {projectsData?.projectList?.map((slideData: any, index: number) => (
           <CarouselSlide {...slideData} key={`CarouselSlide_${index}`} />

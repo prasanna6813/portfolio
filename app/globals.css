@@ -37,3 +37,49 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+  animation-timeline: view(axis inset);
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.5s ease-out;
+  animation-timeline: view(axis inset);
+}
+
+.animate-slide-right {
+  animation: slideRight 0.5s ease-out;
+  animation-timeline: view(axis inset);
+}

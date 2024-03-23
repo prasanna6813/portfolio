@@ -3,11 +3,12 @@ import styles from "./aboutMe.module.scss";
 import Image from "next/image";
 import { aboutMeData } from "./dummyData";
 import ScrollDownButton from "./scrollDownButton";
+import classNames from "classnames";
 
 const AboutMe: FC = () => {
   return (
     <section className={styles.aboutMeWrapper}>
-      <article data-category="myself">
+      <article data-category="myself" className="animate-slide-left">
         <h2 className={styles.title}>{aboutMeData.title}</h2>
         <p className={styles.about}>{aboutMeData.discription}</p>
       </article>
@@ -17,7 +18,7 @@ const AboutMe: FC = () => {
         width="400"
         title="K.L. Prasanna Kumar"
         alt={aboutMeData.altText || "My Picture"}
-        className={styles.image}
+        className={classNames(styles.image, "animate-slide-right")}
       />
       <ScrollDownButton className={styles.scrollDownWrapper} />
     </section>

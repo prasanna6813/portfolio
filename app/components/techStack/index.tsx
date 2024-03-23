@@ -10,7 +10,7 @@ const TechStack: FC = () => {
       className={styles.techStackWrapper}
       data-category="Technical Skills">
       <h2 className={styles.title}>Technical Skills</h2>
-      <div className={styles.techStack}>
+      <div className={classNames(styles.techStack, "animate-fade-in")}>
         {techStackData.map((tech, index) => {
           return (
             <Image
