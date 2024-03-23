@@ -36,6 +36,13 @@
     }
   }
 
+  .contactContainer {
+    @include lg {
+      display: flex;
+      font-size: 28px;
+    }
+  }
+
   .image {
     --s: 16px; /* size of the frame */
     --b: 6px; /* border thickness */

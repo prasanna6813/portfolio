@@ -6,14 +6,14 @@ export const getInTouchData: getInTouchDataType = {
 
 export const socialLister: socialType[] = [
   {
-    image: "/social/linkedin.svg",
-    title: "email",
-    href: "https://www.linkedin.com/in/prasanna-kumar-03a446105/",
-  },
-  {
     image: "/social/mail.svg",
     title: "email",
     href: "mailto:prasanna6813@gmail.com",
+  },
+  {
+    image: "/social/linkedin.svg",
+    title: "linkedin",
+    href: "https://www.linkedin.com/in/prasanna-kumar-03a446105/",
   },
   {
     image: "/social/facebook.svg",

@@ -89,23 +89,23 @@
       cursor: not-allowed;
     }
   }
-  .contactInfoContainer {
-    margin: 18px auto;
+}
 
-    .contactInfo {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 12px;
-      @include md {
-        gap: 24px;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-      }
+.contactInfoContainer {
+  margin: 18px 0;
+
+  .contactInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    @include md {
+      gap: 24px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
     }
   }
 }

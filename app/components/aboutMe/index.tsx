@@ -4,6 +4,7 @@ import Image from "next/image";
 import { aboutMeData } from "./dummyData";
 import ScrollDownButton from "./scrollDownButton";
 import classNames from "classnames";
+import ContactMe from "../getInTouch/contactMe";
 
 const AboutMe: FC = () => {
   return (
@@ -11,6 +12,9 @@ const AboutMe: FC = () => {
       <article data-category="myself" className="animate-slide-left">
         <h2 className={styles.title}>{aboutMeData.title}</h2>
         <p className={styles.about}>{aboutMeData.discription}</p>
+        <div className={styles.contactContainer}>
+          <ContactMe />
+        </div>
       </article>
       <Image
         src={aboutMeData.image}
