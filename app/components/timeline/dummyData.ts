@@ -14,7 +14,7 @@ export const timelineData: any[] = [
     date: "2022 - 2022",
     icon: "/timeline/mobigesture.jpeg",
     isWork: true,
-    title: "Mobigesture Software Pvt. Ltd",
+    title: "Mobigesture Software Pvt. Ltd (acquired by OSI Digital)",
     subtitle: "Associate Software Engineer",
     details:
       "I have gained experience in front-end development by working with React.js, JavaScript, HTML, CSS, and SASS on multiple projects.",

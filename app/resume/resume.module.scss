@@ -3,9 +3,9 @@
 .pdfContainer {
   padding-top: 80px;
   .pdf {
-    height: 100vh;
+    height: 700px;
     @include md {
-      height: 1200px;
+      height: 1300px;
     }
   }
 }

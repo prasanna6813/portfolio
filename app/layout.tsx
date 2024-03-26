@@ -7,7 +7,7 @@ import GetInTouch from "./components/getInTouch";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio | about",
+  title: "K.L. Prasanna Kumar | about",
   description:
     "Exporing Software devolopment opportunities in trending technologies",
 };
