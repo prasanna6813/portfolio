@@ -18,7 +18,6 @@ const TechStack: FC = () => {
               alt={tech.name}
               height="72"
               width="72"
-              layout="fixed"
               className={classNames(
                 styles.techIcon,
                 "transform transition duration-300 hover:scale-125",

@@ -1,17 +1,21 @@
-import React from "react";
-import classNames from "classnames";
-import styles from "./animatebg.module.scss";
+"use client";
+import React, { FC, useEffect, memo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import options from "./options.json";
+import { loadSlim } from "@tsparticles/slim";
 
-const AnimatedBackground = () => {
-  return (
-    <div className="fixed inset-0 z-0">
-      <div
-        className={classNames(
-          styles.animateGradient,
-          "absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500",
-        )}></div>
-    </div>
-  );
+const AnimateBg: FC = () => {
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  return init && <Particles id="tsparticles" options={options} />;
 };
 
-export default AnimatedBackground;
+export default memo(AnimateBg);
