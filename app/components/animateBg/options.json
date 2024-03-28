@@ -5,11 +5,7 @@
             "onHover": {
                 "enable": true,
                 "mode": "bubble"
-            },
-			"onClick": {
-				"enable": true,
-				"mode": "push"
-			}
+            }
         },
         "modes": {
             "bubble": {
