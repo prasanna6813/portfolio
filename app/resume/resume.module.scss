@@ -5,9 +5,9 @@
   padding-top: 80px;
   // background: transparent;
   .pdf {
-    height: 700px;
+    height: 1100px;
     @include md {
-      height: 1300px;
+      height: 2500px;
     }
   }
 }
