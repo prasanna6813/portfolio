@@ -13,7 +13,7 @@ export const socialLister: socialType[] = [
   {
     image: "/social/linkedin.svg",
     title: "linkedin",
-    href: "https://www.linkedin.com/in/prasanna-kumar-03a446105/",
+    href: "https://www.linkedin.com/in/kamjula-prasanna-kumar-03a446105/",
   },
   {
     image: "/social/facebook.svg",
