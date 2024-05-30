@@ -28,6 +28,7 @@
   }
   .shortName {
     font-size: 32px;
+    font-weight: 500;
     padding-bottom: 6px;
     @include md {
       font-size: 42px;
@@ -50,6 +51,8 @@
     }
     .activeLink {
       border-bottom: 2px solid $white;
+    }
+    .activeLabel {
       color: $white;
     }
   }

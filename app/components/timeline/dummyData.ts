@@ -1,13 +1,23 @@
 export const timelineData: any[] = [
   {
     classes: "vertical-timeline-element--work",
-    date: "2022 - present",
+    date: "2024 - present",
+    icon: "/timeline/osidigital.jpeg",
+    isWork: true,
+    title: "OSI Digital",
+    subtitle: "Software Engineer",
+    details:
+      "Actively contributed to enhancing the Next js development processes, I held the responsibility of developing frontend UI and backend APIs in Next js",
+  },
+  {
+    classes: "vertical-timeline-element--work",
+    date: "2022 - 2024",
     icon: "/timeline/osidigital.jpeg",
     isWork: true,
     title: "OSI Digital",
     subtitle: "Associate Software Engineer",
     details:
-      "I have worked with various clients to develop applications using technologies like Next.js, React.js, Node.js, JavaScript, TypeScript, HTML, CSS, and SASS.",
+      "Worked with a range of large and small agencies, start-ups and individuals to build products using technologies like Next.js, React.js, Node.js, JavaScript, TypeScript, HTML, CSS, and SASS.",
   },
   {
     classes: "vertical-timeline-element--work",
