@@ -1,5 +1,6 @@
-$primary: #64ff00;
-$secondary: #343456;
+$primary: #238636;
+$lightPrimary: #4de06b;
+$secondary: #009D9C;
 $black: #000000;
 $white: #ffffff;
 $grey: #606060;
@@ -22,6 +23,7 @@ $max-component-width: 1450px;
 
 :export {
   primary: $primary;
+  lightPrimary: $lightPrimary;
   secondary: $secondary;
   black: $black;
   white: $white;

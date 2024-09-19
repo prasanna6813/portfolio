@@ -23,8 +23,8 @@ const TimelineElement: FC<any> = ({ item }) => {
     <VerticalTimelineElement
       visible={inView}
       className={classNames(item?.classes, styles?.dataContent)}
-      contentStyle={{ background: variables?.grey }}
-      contentArrowStyle={{ borderRight: `7px solid  ${variables?.grey}` }}
+      contentStyle={{ background: variables?.secondary }}
+      contentArrowStyle={{ borderRight: `7px solid  ${variables?.secondary}` }}
       date={item?.date}
       iconStyle={{
         background: variables?.black,
